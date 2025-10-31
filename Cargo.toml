@@ -65,6 +65,7 @@ members = [
   "ledger/authority",
   "ledger/block",
   "ledger/committee",
+  "ledger/load-from-store-profiler",
   "ledger/narwhal",
   "ledger/narwhal/batch-certificate",
   "ledger/narwhal/batch-header",

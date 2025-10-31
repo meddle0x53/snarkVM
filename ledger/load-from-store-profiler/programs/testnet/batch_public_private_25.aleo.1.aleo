@@ -1,0 +1,67 @@
+import credits.aleo;
+
+program batch_public_private_25.aleo;
+
+function payroll_public_private:
+    input r0 as [u64; 25u32].private;
+    input r1 as [address; 25u32].private;
+    add 0u64 r0[0u32] into r2;
+    add r2 r0[1u32] into r3;
+    add r3 r0[2u32] into r4;
+    add r4 r0[3u32] into r5;
+    add r5 r0[4u32] into r6;
+    add r6 r0[5u32] into r7;
+    add r7 r0[6u32] into r8;
+    add r8 r0[7u32] into r9;
+    add r9 r0[8u32] into r10;
+    add r10 r0[9u32] into r11;
+    add r11 r0[10u32] into r12;
+    add r12 r0[11u32] into r13;
+    add r13 r0[12u32] into r14;
+    add r14 r0[13u32] into r15;
+    add r15 r0[14u32] into r16;
+    add r16 r0[15u32] into r17;
+    add r17 r0[16u32] into r18;
+    add r18 r0[17u32] into r19;
+    add r19 r0[18u32] into r20;
+    add r20 r0[19u32] into r21;
+    add r21 r0[20u32] into r22;
+    add r22 r0[21u32] into r23;
+    add r23 r0[22u32] into r24;
+    add r24 r0[23u32] into r25;
+    add r25 r0[24u32] into r26;
+    call credits.aleo/transfer_public_as_signer batch_public_private_25.aleo r26 into r27;
+    call credits.aleo/transfer_public_to_private self.signer r26 into r28 r29;
+    call credits.aleo/transfer_private r28 r1[0u32] r0[0u32] into r30 r31;
+    call credits.aleo/transfer_private r31 r1[1u32] r0[1u32] into r32 r33;
+    call credits.aleo/transfer_private r33 r1[2u32] r0[2u32] into r34 r35;
+    call credits.aleo/transfer_private r35 r1[3u32] r0[3u32] into r36 r37;
+    call credits.aleo/transfer_private r37 r1[4u32] r0[4u32] into r38 r39;
+    call credits.aleo/transfer_private r39 r1[5u32] r0[5u32] into r40 r41;
+    call credits.aleo/transfer_private r41 r1[6u32] r0[6u32] into r42 r43;
+    call credits.aleo/transfer_private r43 r1[7u32] r0[7u32] into r44 r45;
+    call credits.aleo/transfer_private r45 r1[8u32] r0[8u32] into r46 r47;
+    call credits.aleo/transfer_private r47 r1[9u32] r0[9u32] into r48 r49;
+    call credits.aleo/transfer_private r49 r1[10u32] r0[10u32] into r50 r51;
+    call credits.aleo/transfer_private r51 r1[11u32] r0[11u32] into r52 r53;
+    call credits.aleo/transfer_private r53 r1[12u32] r0[12u32] into r54 r55;
+    call credits.aleo/transfer_private r55 r1[13u32] r0[13u32] into r56 r57;
+    call credits.aleo/transfer_private r57 r1[14u32] r0[14u32] into r58 r59;
+    call credits.aleo/transfer_private r59 r1[15u32] r0[15u32] into r60 r61;
+    call credits.aleo/transfer_private r61 r1[16u32] r0[16u32] into r62 r63;
+    call credits.aleo/transfer_private r63 r1[17u32] r0[17u32] into r64 r65;
+    call credits.aleo/transfer_private r65 r1[18u32] r0[18u32] into r66 r67;
+    call credits.aleo/transfer_private r67 r1[19u32] r0[19u32] into r68 r69;
+    call credits.aleo/transfer_private r69 r1[20u32] r0[20u32] into r70 r71;
+    call credits.aleo/transfer_private r71 r1[21u32] r0[21u32] into r72 r73;
+    call credits.aleo/transfer_private r73 r1[22u32] r0[22u32] into r74 r75;
+    call credits.aleo/transfer_private r75 r1[23u32] r0[23u32] into r76 r77;
+    call credits.aleo/transfer_private r77 r1[24u32] r0[24u32] into r78 r79;
+    async payroll_public_private r27 r29 into r80;
+    output r80 as batch_public_private_25.aleo/payroll_public_private.future;
+
+finalize payroll_public_private:
+    input r0 as credits.aleo/transfer_public_as_signer.future;
+    input r1 as credits.aleo/transfer_public_to_private.future;
+    await r0;
+    await r1;

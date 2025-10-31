@@ -1,0 +1,4 @@
+**/.idea
+storage/mainnet/*
+storage/testnet/*
+storage/canary/*
