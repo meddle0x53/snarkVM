@@ -1,0 +1,88 @@
+# label                                      package                               flags...
+
+snarkvm                                      snarkvm
+algorithms                                   snarkvm-algorithms
+algorithms-profiler                          snarkvm-algorithms                    varuna::prove_and_verify_with_square_matrix --features profiler
+
+circuit                                      snarkvm-circuit
+circuit-account                              snarkvm-circuit-account
+circuit-account-noconsole                    snarkvm-circuit-account               --no-default-features
+circuit-algorithms                           snarkvm-circuit-algorithms
+circuit-collections                          snarkvm-circuit-collections
+circuit-collections-noconsole                snarkvm-circuit-collections           --no-default-features
+circuit-environment                          snarkvm-circuit-environment
+circuit-network                              snarkvm-circuit-network
+circuit-program                              snarkvm-circuit-program
+circuit-types                                snarkvm-circuit-types
+circuit-types-address                        snarkvm-circuit-types-address
+circuit-types-boolean                        snarkvm-circuit-types-boolean
+circuit-types-field                          snarkvm-circuit-types-field
+circuit-types-group                          snarkvm-circuit-types-group
+circuit-types-integers                       snarkvm-circuit-types-integers        -- --ignored
+circuit-types-scalar                         snarkvm-circuit-types-scalar
+circuit-types-string                         snarkvm-circuit-types-string
+
+console                                      snarkvm-console
+console-account                              snarkvm-console-account
+console-algorithms                           snarkvm-console-algorithms
+console-collections                          snarkvm-console-collections
+console-network                              snarkvm-console-network
+console-network-environment                  snarkvm-console-network-environment
+console-program                              snarkvm-console-program
+console-types                                snarkvm-console-types
+console-types-address                        snarkvm-console-types-address
+console-types-boolean                        snarkvm-console-types-boolean
+console-types-field                          snarkvm-console-types-field
+console-types-group                          snarkvm-console-types-group
+console-types-integers                       snarkvm-console-types-integers
+console-types-scalar                         snarkvm-console-types-scalar
+console-types-string                         snarkvm-console-types-string
+
+curves                                       snarkvm-curves
+fields                                       snarkvm-fields
+
+ledger                                       snarkvm-ledger
+ledger-with-rocksdb                          snarkvm-ledger                        --features=rocks
+ledger-with-valid-solutions                  snarkvm-ledger                        valid_solutions --features=test
+
+ledger-authority                             snarkvm-ledger-authority
+ledger-block                                 snarkvm-ledger-block
+ledger-committee                             snarkvm-ledger-committee
+ledger-narwhal                               snarkvm-ledger-narwhal
+ledger-narwhal-batch-certificate             snarkvm-ledger-narwhal-batch-certificate
+ledger-narwhal-batch-header                  snarkvm-ledger-narwhal-batch-header
+ledger-narwhal-data                          snarkvm-ledger-narwhal-data
+ledger-narwhal-subdag                        snarkvm-ledger-narwhal-subdag
+ledger-narwhal-transmission                  snarkvm-ledger-narwhal-transmission
+ledger-narwhal-transmission-id               snarkvm-ledger-narwhal-transmission-id
+ledger-puzzle                                snarkvm-ledger-puzzle
+ledger-puzzle-epoch                          snarkvm-ledger-puzzle-epoch
+ledger-query                                 snarkvm-ledger-query
+ledger-store                                 snarkvm-ledger-store                  --features=rocks
+ledger-test-helpers                          snarkvm-ledger-test-helpers
+
+parameters                                   snarkvm-parameters
+parameters-large                             snarkvm-parameters                     --features large_params
+parameters-uncached                          snarkvm-parameters                     -- --ignored test_load_bytes_mini
+
+synthesizer                                  snarkvm-synthesizer                    --lib --bins
+synthesizer-test                             snarkvm-synthesizer                    --lib --bins --features test
+synthesizer-integration                      snarkvm-synthesizer                    --test \* --features test
+
+synthesizer-process                          snarkvm-synthesizer-process
+synthesizer-process-with-rocksdb             snarkvm-synthesizer-process            --features=rocks
+
+synthesizer-program                          snarkvm-synthesizer-program            --lib --bins
+synthesizer-program-integration              snarkvm-synthesizer-program            -- --skip keccak --skip psd --skip sha --skip instruction::is --skip instruction::equal --skip instruction::commit
+synthesizer-program-integration-keccak       snarkvm-synthesizer-program            keccak
+synthesizer-program-integration-psd          snarkvm-synthesizer-program            psd
+synthesizer-program-integration-sha          snarkvm-synthesizer-program            sha
+synthesizer-program-integration-instruction-is      snarkvm-synthesizer-program      instruction::is
+synthesizer-program-integration-instruction-equal   snarkvm-synthesizer-program      instruction::equal
+synthesizer-program-integration-instruction-commit  snarkvm-synthesizer-program      instruction::commit
+
+synthesizer-snark                            snarkvm-synthesizer-snark
+
+utilities                                    snarkvm-utilities
+utilities-derives                            snarkvm-utilities-derives
+
